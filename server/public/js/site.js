@@ -120,3 +120,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// ===== Column Card Navigation =====
+document.addEventListener('DOMContentLoaded', () => {
+  const columnCards = document.querySelectorAll('.column-card');
+  columnCards.forEach((card) => {
+    const columnUrl = card.getAttribute('data-column');
+    if (columnUrl) {
+      card.addEventListener('click', () => {
+        window.location.href = `/${columnUrl}`;
+      });
+    }
+  });
+});
