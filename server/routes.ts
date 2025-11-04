@@ -2,8 +2,14 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
+import express from "express";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static HTML files from server/public
+  const publicPath = path.resolve(import.meta.dirname, "public");
+  app.use(express.static(publicPath));
+
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
     try {
