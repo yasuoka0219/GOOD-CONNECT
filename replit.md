@@ -4,7 +4,7 @@
 
 This project is the official website for "GOOD CONNECT," a telemarketing and sales support service operated by GOLVOYA Inc. The primary goal is to promote the service's reliability and track record, driving inquiries through a professional online presence. The site emphasizes industry-low pricing and a supportive approach to script design and client engagement.
 
-The project involved a complete conversion of a React-based application to pure HTML, CSS, and JavaScript. It comprises five key pages: Home, Staff Introduction, Testimonials, Column, and Company Profile. The design adheres to the minimalist, white-based GOLVOYA brand with orange accents.
+The project involved a complete conversion of a React-based application to pure HTML, CSS, and JavaScript. It comprises five main pages (Home, Staff Introduction, Testimonials, Column, and Company Profile) plus three detailed staff profile pages. The design adheres to the minimalist, white-based GOLVOYA brand with orange (#F28C3D) accents.
 
 ## User Preferences
 
@@ -38,8 +38,12 @@ The website is built using a modern, server-rendered approach with static files.
 
 ### Feature Specifications
 - **Homepage (`index.html`)**: Features an 8-section layout including Hero, Services (4-column), 8 Reasons to Choose Us (grid with hover effects), Case Studies (3-column cards), Pricing, FAQ (accordion), Contact Form with validation, and a consistent Footer.
-- **Staff Page (`staff.html`)**: Showcases 3 staff profiles with circular photos and orange borders.
-- **Testimonials Page (`testimonials.html`)**: Displays 4 client case studies with business images, performance metrics, and client comments in a 2-column grid.
+- **Staff Page (`staff.html`)**: Showcases 3 staff profiles with circular photos and orange borders. Each staff name links to their detailed profile page.
+- **Staff Detail Pages**: 
+  - **Kotani (`staff-kotani.html`)**: CEO profile detailing entrepreneurial journey, business philosophy, and vision for telemarketing services.
+  - **Kido (`staff-kido.html`)**: Operations Manager profile highlighting transition from ANA ground staff and expertise in remote team management.
+  - **Ogawa (`staff-ogawa.html`)**: Call staff interview showcasing day-to-day operations, work satisfaction, and company culture.
+- **Testimonials Page (`testimonials.html`)**: Displays 4 client case studies with real customer photos (testimonial1-4.png), performance metrics, and detailed client comments in a 2-column grid.
 - **Column Page (`column.html`)**: Presents 10 column articles with thumbnail images and hover effects in a 3-column grid.
 - **Company Page (`company.html`)**: Provides company information, an embedded Google Map, and access details.
 - **SEO**: Implemented with appropriate meta titles, descriptions, OGP settings, and `ja` language declaration.
