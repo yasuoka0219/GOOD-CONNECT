@@ -1,306 +1,50 @@
 # GOOD CONNECT - テレアポ代行サービス公式サイト
 
-## プロジェクト概要
+## Overview
 
-株式会社GOLVOYAが運営する「グッドコネクト（GOOD CONNECT）」の公式Webサイトです。**React + Tailwind CSSから純粋なHTML/CSSへの完全変換が完了しました**。テレアポ代行・営業支援サービスの信頼性と実績を訴求し、問い合わせを促進することを目的としています。全5ページ（ホーム、スタッフ紹介、お客様の声、コラム、会社概要）を純粋なHTML/CSS/JavaScriptで実装しています。
+This project is the official website for "GOOD CONNECT," a telemarketing and sales support service operated by GOLVOYA Inc. The primary goal is to promote the service's reliability and track record, driving inquiries through a professional online presence. The site emphasizes industry-low pricing and a supportive approach to script design and client engagement.
 
-## 🔄 **重要な変更：React → HTML/CSS変換完了**
+The project involved a complete conversion of a React-based application to pure HTML, CSS, and JavaScript. It comprises five key pages: Home, Staff Introduction, Testimonials, Column, and Company Profile. The design adheres to the minimalist, white-based GOLVOYA brand with orange accents.
 
-ユーザーの要求により、Reactベースのアプリケーションを純粋なHTML/CSSに完全変換しました。
+## User Preferences
 
-### 変換内容
-- **Before**: React + TypeScript + Tailwind CSS + Wouter
-- **After**: 純粋なHTML + CSS + Vanilla JavaScript
-- **デザイン**: GOLVOYAブランド（https://golvoya.com/）準拠 - ミニマリスト、白ベース、オレンジアクセント
+The project required a complete transformation from a React + Tailwind CSS application to pure HTML, CSS, and Vanilla JavaScript. The current implementation should serve as the definitive version.
 
-## 📁 **新しいファイル構造**
+## System Architecture
 
-```
-server/public/              # 静的ファイル配信ディレクトリ
-├── index.html             # ホームページ（8セクション）
-├── staff.html             # スタッフ紹介（3名）
-├── testimonials.html      # お客様の声（4社事例）
-├── column.html            # コラム（10記事）
-├── company.html           # 会社概要（会社情報＋マップ）
-├── css/
-│   └── main.css          # 完全なCSS（1400+行、デザイントークン、レスポンシブ）
-├── js/
-│   └── site.js           # バニラJS（メニュー、スクロール、フォーム）
-└── assets/
-    └── images/           # ストック画像（既存）
+The website is built using a modern, server-rendered approach with static files.
 
-legacy/                    # 旧Reactソース（参照用）
-├── client/
-└── shared/
-```
+### UI/UX Decisions
+- **Design Language**: Adheres to the GOLVOYA brand (https://golvoya.com/), characterized by a minimalist, white-based aesthetic with warm orange accents.
+- **Color Scheme**: Main color is Soft Navy (220 40% 20%), with Warm Orange (27 85% 55%) as the accent.
+- **Typography**: Noto Sans JP for Japanese text and Inter for numbers and English.
+- **Layout**: Fully responsive across desktop, tablet, and mobile breakpoints (768px and 1024px). Grid layouts adjust from 4 columns to 2 to 1 column based on screen size.
+- **Animations**: Subtle scroll-fade-ins and hover effects for cards and images.
+- **Imagery**: Utilizes stock images for staff, services, case studies, columns, and office visuals. Images are object-covered, with circular profiles featuring orange ring borders. Gradient overlays enhance text readability over background images.
 
-## 実装完了機能
+### Technical Implementations
+- **Frontend**:
+    - **Pure HTML5**: Semantic markup for all five pages.
+    - **Custom CSS**: A comprehensive `main.css` file (1400+ lines) incorporating custom properties (design tokens), BEM-style naming, and full responsiveness without a framework.
+    - **Vanilla JavaScript**: `site.js` handles mobile menu toggling, smooth scrolling, FAQ accordions, and contact form submissions with API integration.
+- **Backend**:
+    - **Express.js**: Serves static files from the `server/public` directory.
+    - **In-memory storage**: Temporarily stores contact form submissions.
+    - **API Endpoint**: `POST /api/contact` for form submission.
+- **File Structure**:
+    - `server/public/`: Contains all static assets (HTML, CSS, JS, images).
+    - `legacy/`: Stores the old React source code for reference.
+    - `shared/`: Holds data schemas.
 
-### ✅ ホームページ（ランディングページ） - server/public/index.html
+### Feature Specifications
+- **Homepage (`index.html`)**: Features an 8-section layout including Hero, Services (4-column), 8 Reasons to Choose Us (grid with hover effects), Case Studies (3-column cards), Pricing, FAQ (accordion), Contact Form with validation, and a consistent Footer.
+- **Staff Page (`staff.html`)**: Showcases 3 staff profiles with circular photos and orange borders.
+- **Testimonials Page (`testimonials.html`)**: Displays 4 client case studies with business images, performance metrics, and client comments in a 2-column grid.
+- **Column Page (`column.html`)**: Presents 10 column articles with thumbnail images and hover effects in a 3-column grid.
+- **Company Page (`company.html`)**: Provides company information, an embedded Google Map, and access details.
+- **SEO**: Implemented with appropriate meta titles, descriptions, OGP settings, and `ja` language declaration.
 
-1. **ヒーローセクション**
-   - ビジネス街の高層ビル群（上向き構図）の背景画像
-   - ネイビーグラデーションオーバーレイで可読性確保
-   - メインコピー「業界最安値」＋サブコピー
-   - 無料相談CTAボタン（スムーススクロール対応）
+## External Dependencies
 
-2. **サービス紹介セクション**
-   - 4カラムレイアウト（レスポンシブ対応）
-   - 円形ビジネス画像付き説明カード（オレンジリング装飾）
-   - リスト作成・スクリプト設計・架電実施・成果報告
-   - 各サービスに対応したストック画像（文書、執筆、電話、分析）
-
-3. **選ばれる8つの理由**
-   - 8つのカードグリッド
-   - ホバーエフェクト
-   - 番号バッジ＋円形ビジネス画像（オレンジリング装飾）
-   - 各強みに対応したストック画像（コスト、チーム、データ分析など）
-
-4. **導入実績・成果事例**
-   - 3カラムカード形式
-   - 円形ビジネス画像付き（成長、握手、コラボレーション）
-   - 具体的な数値・成果表示
-   - A社・B社・C社の事例
-
-5. **料金プラン**
-   - 初期費用・架電単価・成果報酬の明確表示
-   - オプションサービス一覧
-   - お見積もりCTAボタン
-
-6. **FAQ（よくある質問）**
-   - アコーディオン形式
-   - 6つの質問と回答
-   - スムーズな開閉アニメーション
-
-7. **問い合わせフォーム**
-   - 入力項目: 会社名、担当者名、電話番号、メールアドレス、お問い合わせ内容
-   - バリデーション機能
-   - 送信中ローディング表示
-   - 送信完了メッセージ
-   - バックエンド連携済み
-
-8. **フッター**
-   - ビル群背景画像（モダンオフィスビル、不透明度50%）
-   - グラデーションオーバーレイで可読性確保
-   - 3カラムレイアウト：GOOD CONNECT / ナビゲーションリンク / 会社情報
-   - ナビゲーションリンク：ホーム、スタッフ紹介、お客様の声、コラム、会社概要（見出しなし）
-   - 会社情報（住所・電話番号）
-   - コピーライト表示
-   - 全ページで統一された表示
-   - レスポンシブ対応（モバイルは縦積み）
-
-### ✅ 追加ページ（4ページ） - 純粋なHTML/CSS
-
-**1. スタッフ紹介ページ (server/public/staff.html)**
-   - 3名のスタッフ紹介カード（実際のプロフィール写真付き）
-   - 代表取締役：小谷陽一（kotani1.jpg）
-   - オペレーション管理責任者：木戸那名見（kido2.jpg）
-   - 架電スタッフ（ogawa1.png）
-   - 円形プロフィール写真（オレンジ枠付き）
-   - ヒーローセクション＋CTAセクション
-
-**2. お客様の声ページ (server/public/testimonials.html)**
-   - 4社の導入事例カード（ヘッダー画像付き）
-   - IT業 株式会社S社、不動産業 一般社団法人C、人材派遣業 株式会社B、SaaS開発業 株式会社O
-   - 各カードにビジネスイメージ画像（グラデーションオーバーレイ）
-   - 月間架電数、アポ率（依頼前→依頼後）の数値表示
-   - 商材・期間バッジ
-   - 顧客コメント表示
-   - 2カラムグリッドレイアウト（レスポンシブ対応）
-
-**3. コラムページ (server/public/column.html)**
-   - 10個のコラム記事カード（サムネイル画像付き）
-   - インサイドセールス・テレアポ代行に関するお役立ち情報
-   - 各カードにサムネイル画像＋番号バッジ
-   - ホバーエフェクト（画像拡大アニメーション）
-   - 3カラムグリッドレイアウト（レスポンシブ対応）
-   - 説明セクション付き
-
-**4. 会社概要ページ (server/public/company.html)**
-   - オフィスヒーロー画像（グラデーションオーバーレイ＋会社名表示）
-   - 会社情報表示（会社名、代表者、所在地、電話番号、URL）
-   - Googleマップ埋め込み
-   - アクセス情報
-   - アイコン付き情報カード
-
-### 🎨 デザイン仕様
-
-- **メインカラー**: ソフトネイビー (220 40% 20%)
-- **アクセントカラー**: ウォームオレンジ (27 85% 55%)
-- **フォント**: Noto Sans JP（日本語）、Inter（数字・英語）
-- **レイアウト**: レスポンシブ対応（PC・タブレット・スマホ）
-- **アニメーション**: スクロールフェードイン、ホバーエフェクト
-- **画像**: ストック画像使用（スタッフ写真、サービス画像、事例画像、コラムサムネイル、オフィス写真）
-  - 全画像object-coverで適切にトリミング
-  - 円形画像表示（rounded-full）とオレンジリングボーダー（ring-2 ring-orange/20）
-  - グラデーションオーバーレイでテキスト可読性確保
-  - ホバーエフェクト（コラムカード：拡大アニメーション、カード：控えめなシャドウ）
-  - レスポンシブ画像サイズ（モバイル：80px、デスクトップ：96px）
-
-### 📱 レスポンシブ対応
-
-- **デスクトップ**: フルナビゲーションバー
-- **モバイル**: ハンバーガーメニュー
-- **ブレークポイント**: 768px（タブレット）、1024px（デスクトップ）
-- **グリッド調整**: 4カラム→2カラム→1カラム
-
-### 🔧 技術スタック
-
-**フロントエンド**:
-- ✅ **純粋なHTML5** - セマンティックマークアップ
-- ✅ **カスタムCSS** (main.css) - 1400+行、デザイントークン、BEMスタイル命名
-- ✅ **Vanilla JavaScript** (site.js) - フレームワークなし、軽量
-- ✅ **レスポンシブデザイン** - モバイル、タブレット、デスクトップ対応
-
-**バックエンド**:
-- Express.js - 静的ファイル配信（server/public）
-- In-memory storage - 問い合わせデータ保存
-- APIエンドポイント: POST /api/contact
-
-**削除されたもの（React版から）**:
-- ❌ React / TypeScript
-- ❌ Wouter (ルーティング)
-- ❌ Tailwind CSS
-- ❌ Shadcn/ui
-- ❌ React Hook Form + Zod
-- ❌ TanStack Query
-
-### 🌐 SEO対策
-
-- **Title**: テレアポ代行ならグッドコネクト｜業界最安値で成果を創出
-- **Meta Description**: 攻めのスクリプト設計と伴走支援で成果に直結するテレアポ代行サービス
-- **OGP設定**: タイトル・説明・画像
-- **言語設定**: ja（日本語）
-
-### 🔄 動作確認済み機能
-
-✅ ヒーローCTAからフォームへのスムーススクロール  
-✅ ヘッダーナビゲーションのスクロール挙動  
-✅ 料金プランCTAからフォームへのスムーススクロール  
-✅ FAQアコーディオンの開閉  
-✅ 問い合わせフォームの送信（バリデーション・ローディング・成功メッセージ）  
-✅ モバイルメニューの開閉  
-✅ レスポンシブデザインの動作  
-✅ 全セクションの表示  
-
-### 🔄 ナビゲーション機能
-
-- **ヘッダーナビゲーション**: 
-  - ホームページ：サービス紹介/選ばれる理由/料金プランへのスムーススクロール
-  - 他のページ：ホーム/スタッフ紹介/お客様の声/コラム/会社概要へのリンク
-  - レスポンシブ対応（デスクトップ・モバイルハンバーガーメニュー）
-- **Wouter**: クライアントサイドルーティング
-- **無料相談ボタン**: 各ページから問い合わせフォームへスムーズ遷移
-
-### 📁 **新しいプロジェクト構成**
-
-```
-server/
-├── public/                    # 静的ファイル（HTML/CSS/JS）
-│   ├── index.html            # ホームページ
-│   ├── staff.html            # スタッフ紹介
-│   ├── testimonials.html     # お客様の声
-│   ├── column.html           # コラム
-│   ├── company.html          # 会社概要
-│   ├── css/
-│   │   └── main.css         # メインスタイルシート（1400+行）
-│   ├── js/
-│   │   └── site.js          # JavaScript（メニュー、フォーム）
-│   └── assets/
-│       └── images/          # ストック画像
-├── routes.ts                 # APIルート（/api/contact）
-├── storage.ts                # データストレージ
-└── index.ts                  # Expressサーバー
-
-legacy/                        # 旧Reactソース（参照用のみ）
-├── client/
-└── shared/
-
-shared/
-└── schema.ts                 # データスキーマ（API用）
-```
-
-### 🚀 実行方法
-
-サイトは既に稼働中です。「Start application」ワークフローが自動的に以下を実行します：
-
-```bash
-npm run dev
-```
-
-**動作モード**:
-- **開発モード** (NODE_ENV=development): Vite開発サーバー（React版、参照用のみ）
-- **本番モード**: Express静的ファイル配信（server/public/からHTML/CSS/JS配信）
-
-**アクセス**:
-- ホームページ: http://localhost:5000/
-- スタッフ紹介: http://localhost:5000/staff.html
-- お客様の声: http://localhost:5000/testimonials.html
-- コラム: http://localhost:5000/column.html
-- 会社概要: http://localhost:5000/company.html
-
-### 📊 APIエンドポイント
-
-**POST /api/contact**
-- 問い合わせフォーム送信
-- リクエストボディ: `{ companyName, contactName, phoneNumber, email, message }`
-- レスポンス: 作成された送信データ
-
-**GET /api/contact**
-- 全問い合わせ取得（管理画面用）
-- レスポンス: 送信データの配列
-
-### 🎯 今後の拡張案
-
-1. **メール送信機能**: SendGrid/Resend連携
-2. **管理画面**: 問い合わせ履歴の閲覧・管理
-3. **実績数値のカウントアップアニメーション**
-4. **多言語対応**: 英語版ページ追加
-5. **ブログ・コラム**: SEO強化
-
-### 📝 注意事項
-
-- 現在、フォーム送信データはメモリ内保存（サーバー再起動で消失）
-- 本番環境ではデータベース接続を推奨
-- メール送信機能は未実装（次フェーズで対応可能）
-
-## ✅ **変換完了**
-
-**React + Tailwind CSS → 純粋なHTML/CSS への完全変換が完了しました！**
-
-### 完成した全5ページ：
-1. **index.html** - ホームページ（8セクション：Hero, Services, Strengths, Case Studies, Pricing, FAQ, Contact, Footer）
-2. **staff.html** - スタッフ紹介（3名のプロフィール）
-3. **testimonials.html** - お客様の声（4社の導入事例）
-4. **column.html** - コラム（10記事）
-5. **company.html** - 会社概要（会社情報＋Googleマップ）
-
-### CSS実装：
-- **main.css**: 1400+行の完全なCSS
-  - カスタムプロパティ（デザイントークン）
-  - レスポンシブデザイン（モバイル、タブレット、デスクトップ）
-  - BEMスタイルのクラス命名
-  - Tailwindユーティリティの完全再現
-
-### JavaScript実装：
-- **site.js**: バニラJavaScript
-  - モバイルメニュー制御
-  - スムーススクロール
-  - FAQアコーディオン
-  - 問い合わせフォーム送信（API連携）
-
-### デザイン維持：
-- ✅ GOLVOYAブランド準拠（https://golvoya.com/）
-- ✅ ネイビー（#2D3E50）×オレンジ（#F28C3D）
-- ✅ Noto Sans JP + Inter
-- ✅ ミニマリスト、白ベース
-- ✅ レスポンシブ対応
-- ✅ SEO対策（meta tags, OGP）
-
-### 動作確認済み：
-- ✅ 全ページナビゲーション
-- ✅ モバイルメニュー開閉
-- ✅ スムーススクロール
-- ✅ FAQアコーディオン
-- ✅ 問い合わせフォーム送信
-- ✅ レスポンシブレイアウト
+- **Express.js**: Used for serving static files and handling API requests.
+- **Google Maps**: Embedded for location display on the company page.
