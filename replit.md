@@ -48,6 +48,25 @@ The website is built using a modern, server-rendered approach with static files.
 - **Company Page (`company.html`)**: Provides company information, an embedded Google Map, and access details.
 - **SEO**: Implemented with appropriate meta titles, descriptions, OGP settings, and `ja` language declaration.
 
+## Recent Updates (November 2025)
+
+### Image Replacements
+- **Column Page Images**: Replaced all foreign model images with Japanese business professionals
+  - Column 2: Team strategy meeting (jp-team-strategy.jpg)
+  - Column 3: Conference room collaboration (jp-conference-room.jpg)
+  - Column 5: Teamwork handshake (jp-teamwork-hands.jpg)
+  - Column 6: Call center professional (jp-call-center.jpg)
+  - Column 9: Note-taking business scene (jp-note-taking.jpg)
+  - Column 10: Checklist review (jp-checklist-review.jpg)
+- **Homepage**: Updated phone call service image (jp-phone-call-new.jpg)
+
+### Text Layout Improvements
+- Fixed unnatural word breaks in Japanese text on column cards
+- Added CSS rules to prevent mid-word line breaks:
+  - `word-break: keep-all` - Prevents breaking within Japanese words
+  - `overflow-wrap: break-word` - Only breaks at natural boundaries
+  - Improved line-height for better readability
+
 ## External Dependencies
 
 - **Express.js**: Used for serving static files and handling API requests.
