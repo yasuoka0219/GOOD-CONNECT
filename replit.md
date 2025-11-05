@@ -60,12 +60,18 @@ The website is built using a modern, server-rendered approach with static files.
   - Column 10: Checklist review (jp-checklist-review.jpg)
 - **Homepage**: Updated phone call service image (jp-phone-call-new.jpg)
 
-### Text Layout Improvements
-- Fixed unnatural word breaks in Japanese text on column cards
-- Added CSS rules to prevent mid-word line breaks:
+### Layout Improvements
+- **Text Layout**: Fixed unnatural word breaks in Japanese text on column cards
   - `word-break: keep-all` - Prevents breaking within Japanese words
   - `overflow-wrap: break-word` - Only breaks at natural boundaries
   - Improved line-height for better readability
+- **Pricing Section Centering**: Fixed alignment issues in pricing section
+  - Added `margin: 0 auto` to `.container-narrow` for proper centering
+  - Added `text-align: center` to `.strength-title` for option services heading
+- **Testimonials Page Images**: Fixed excessive cropping of customer photos
+  - Increased image container height from 12rem (192px) to 18rem (288px)
+  - Added `object-position: center 20%` to ensure faces are properly displayed
+  - All four customer testimonial photos now show faces without cropping
 
 ## External Dependencies
 
