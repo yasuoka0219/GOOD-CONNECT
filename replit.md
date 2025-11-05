@@ -72,12 +72,14 @@ The website is built using a modern, server-rendered approach with static files.
   - Increased image container height from 12rem (192px) to 18rem (288px)
   - Added `object-position: center 20%` to ensure faces are properly displayed
   - All four customer testimonial photos now show faces without cropping
-- **Column Card Size Uniformity**: Standardized all column card heights using Flexbox
-  - Applied `display: flex; flex-direction: column; height: 100%` to `.column-card`
-  - Card content area uses `flex: 1` to fill available space
-  - Title (h3) uses `flex: 1` to expand, pushing "Read more" link to bottom
+- **Column Card Size Uniformity**: Completely standardized all column card sizes using CSS Grid and Flexbox
+  - Created dedicated `.column-grid` with `grid-template-columns: repeat(3, 1fr); gap: 1.5rem;` for equal-width columns
+  - Applied `display: flex; flex-direction: column; height: 100%; padding: 0 !important;` to `.column-card` to override `.card` padding
+  - Card content area uses `flex: 1` with Flexbox to fill available space
+  - Title uses `overflow-wrap: anywhere;` (removed `word-break: keep-all;` which was causing grid columns to expand unevenly)
   - Image container fixed at `height: 12rem; flex-shrink: 0`
-  - All cards in each row now have uniform height regardless of title text length
+  - All cards now have perfectly uniform width (equal grid columns) and uniform height within each row
+  - Root cause: `word-break: keep-all;` prevented text wrapping, forcing grid columns to expand to fit long titles
 
 ## External Dependencies
 

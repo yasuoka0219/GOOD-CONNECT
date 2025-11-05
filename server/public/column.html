@@ -8,38 +8,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <style>
+    /* グリッドコンテナ */
+    .column-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    
+    /* カード全体 */
     .column-card {
       cursor: pointer;
       display: flex;
       flex-direction: column;
       height: 100%;
+      min-height: 400px;
+      padding: 0 !important;
     }
-    .column-card > div:last-child {
-      flex: 1;
+    
+    /* カードコンテンツエリア */
+    .column-card-content {
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
-    }
-    .column-card h3 {
-      word-break: keep-all;
-      overflow-wrap: break-word;
-      line-height: 1.6;
       flex: 1;
     }
+    
+    /* カードタイトル */
+    .column-card-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    
+    /* 画像コンテナ */
     .column-image-container {
       position: relative;
       height: 12rem;
       overflow: hidden;
       flex-shrink: 0;
     }
+    
     .column-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
+    
     .column-card:hover .column-image {
       transform: scale(1.05);
     }
+    
+    /* バッジ */
     .column-badge {
       position: absolute;
       top: 0.75rem;
@@ -55,6 +78,8 @@
       font-size: 0.875rem;
       font-weight: 700;
     }
+    
+    /* リンク */
     .column-link {
       display: flex;
       align-items: center;
@@ -63,12 +88,27 @@
       font-size: 0.875rem;
       margin-top: auto;
     }
+    
     .column-arrow {
       margin-left: 0.25rem;
       transition: transform 0.2s ease;
     }
+    
     .column-card:hover .column-arrow {
       transform: translateX(0.25rem);
+    }
+    
+    /* レスポンシブ対応 */
+    @media (max-width: 1024px) {
+      .column-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .column-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -129,14 +169,14 @@
 
     <section class="section bg-white">
       <div class="container">
-        <div class="grid grid-cols-3 gap-6">
+        <div class="column-grid">
           <div class="card column-card" data-column="column-1.html">
             <div class="column-image-container">
               <img src="/assets/images/jp-sales-call1.jpg" alt="コラム1" class="column-image">
               <div class="column-badge">1</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 【営業】インサイドセールスとは？代行の必要性やテレアポの重要性について
               </h3>
               <div class="column-link">
@@ -154,8 +194,8 @@
               <img src="/assets/images/jp-team-strategy.jpg" alt="コラム2" class="column-image">
               <div class="column-badge">2</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 インサイドセールス代行の料金相場は？代行での成功戦略と活用ポイント
               </h3>
               <div class="column-link">
@@ -173,8 +213,8 @@
               <img src="/assets/images/jp-conference-room.jpg" alt="コラム3" class="column-image">
               <div class="column-badge">3</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 インサイドセールス代行を比較する前にチェック！代行サービスの選び方
               </h3>
               <div class="column-link">
@@ -192,8 +232,8 @@
               <img src="/assets/images/jp-meeting1.jpg" alt="コラム4" class="column-image">
               <div class="column-badge">4</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 インサイドセールス代行における成果報酬型の特徴やメリット・選び方を解説
               </h3>
               <div class="column-link">
@@ -211,8 +251,8 @@
               <img src="/assets/images/jp-teamwork-hands.jpg" alt="コラム5" class="column-image">
               <div class="column-badge">5</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 【インサイドセールス代行】安い業者を探すコツは？代行効果を最大化する方法
               </h3>
               <div class="column-link">
@@ -230,8 +270,8 @@
               <img src="/assets/images/jp-call-center.jpg" alt="コラム6" class="column-image">
               <div class="column-badge">6</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 テレアポ代行とは？メリット・デメリットと注意点への対策を解説
               </h3>
               <div class="column-link">
@@ -249,8 +289,8 @@
               <img src="/assets/images/jp-team-collab.jpg" alt="コラム7" class="column-image">
               <div class="column-badge">7</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 テレアポ代行を導入！営業成果を上げる業者の選び方と活用のコツ
               </h3>
               <div class="column-link">
@@ -268,8 +308,8 @@
               <img src="/assets/images/jp-data-analysis.jpg" alt="コラム8" class="column-image">
               <div class="column-badge">8</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 テレアポ代行の料金体系は？テレアポ代行別のサービス詳細や料金相場
               </h3>
               <div class="column-link">
@@ -287,8 +327,8 @@
               <img src="/assets/images/jp-note-taking.jpg" alt="コラム9" class="column-image">
               <div class="column-badge">9</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 テレアポ代行サービスの特徴は？導入のメリット・業者選び・導入の流れ
               </h3>
               <div class="column-link">
@@ -306,8 +346,8 @@
               <img src="/assets/images/jp-checklist-review.jpg" alt="コラム10" class="column-image">
               <div class="column-badge">10</div>
             </div>
-            <div style="padding: 1.5rem;">
-              <h3 style="font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin-bottom: 1rem;">
+            <div class="column-card-content">
+              <h3 class="column-card-title">
                 テレアポ代行業者の選び方と失敗しないポイントを解説
               </h3>
               <div class="column-link">
