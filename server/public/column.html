@@ -8,11 +8,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <style>
-    .column-card { cursor: pointer; }
+    .column-card {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .column-card > div:last-child {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .column-card h3 {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      line-height: 1.6;
+      flex: 1;
+    }
     .column-image-container {
       position: relative;
       height: 12rem;
       overflow: hidden;
+      flex-shrink: 0;
     }
     .column-image {
       width: 100%;
@@ -38,17 +55,13 @@
       font-size: 0.875rem;
       font-weight: 700;
     }
-    .column-card h3 {
-      word-break: keep-all;
-      overflow-wrap: break-word;
-      line-height: 1.6;
-    }
     .column-link {
       display: flex;
       align-items: center;
       color: var(--color-orange);
       font-weight: 500;
       font-size: 0.875rem;
+      margin-top: auto;
     }
     .column-arrow {
       margin-left: 0.25rem;

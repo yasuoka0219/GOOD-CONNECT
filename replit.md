@@ -72,6 +72,12 @@ The website is built using a modern, server-rendered approach with static files.
   - Increased image container height from 12rem (192px) to 18rem (288px)
   - Added `object-position: center 20%` to ensure faces are properly displayed
   - All four customer testimonial photos now show faces without cropping
+- **Column Card Size Uniformity**: Standardized all column card heights using Flexbox
+  - Applied `display: flex; flex-direction: column; height: 100%` to `.column-card`
+  - Card content area uses `flex: 1` to fill available space
+  - Title (h3) uses `flex: 1` to expand, pushing "Read more" link to bottom
+  - Image container fixed at `height: 12rem; flex-shrink: 0`
+  - All cards in each row now have uniform height regardless of title text length
 
 ## External Dependencies
 
