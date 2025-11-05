@@ -127,6 +127,7 @@ p {
 
 .container-narrow {
   max-width: 48rem; /* 768px */
+  margin: 0 auto;
 }
 
 .section {
@@ -540,6 +541,7 @@ p {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: var(--spacing-4);
+  text-align: center;
 }
 
 .strength-description {
