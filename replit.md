@@ -51,6 +51,12 @@ The website is built using a modern, server-rendered approach with static files.
 ## Recent Updates (November 2025)
 
 ### Image Replacements
+- **Column Detail Pages (column-1.html through column-10.html)**: Consolidated all article images to single GoodConnect branded images
+  - Replaced all article images with `/images/goodconnect-[1-10].png` matching column numbers
+  - Removed all secondary article images (2nd, 3rd, 4th images) from detail pages
+  - Each column detail page now has exactly 1 article image with class "article-image"
+  - Author and footer images remain unchanged and separate from article content
+  - Total reduction: column-2 to column-6 (2→1 images), column-7 (3→1 images), column-8 to column-9 (3→1 images), column-10 (4→1 images)
 - **Column Page Images**: Replaced all foreign model images with Japanese business professionals
   - Column 2: Team strategy meeting (jp-team-strategy.jpg)
   - Column 3: Conference room collaboration (jp-conference-room.jpg)
