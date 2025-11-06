@@ -37,7 +37,7 @@ The website is built using a modern, server-rendered approach with static files.
     - `shared/`: Holds data schemas.
 
 ### Feature Specifications
-- **Homepage (`index.html`)**: Features an 9-section layout including Hero, Services (4-column with circular images), 8 Reasons to Choose Us (grid with hover effects), Flow (4-step vertical flow diagram), Case Studies (3-column cards), Pricing, FAQ (accordion), Contact Form with validation, and a consistent Footer.
+- **Homepage (`index.html`)**: Features an 9-section layout including Hero, Services (4-column with circular images), 8 Reasons to Choose Us (grid with hover effects), Flow (6-step vertical flow diagram), Case Studies (3-column cards), Pricing, FAQ (accordion), Contact Form with validation, and a consistent Footer.
 - **Staff Page (`staff.html`)**: Showcases 3 staff profiles with circular photos and orange borders. Each staff name links to their detailed profile page.
 - **Staff Detail Pages**: 
   - **Kotani (`staff-kotani.html`)**: CEO profile detailing entrepreneurial journey, business philosophy, and vision for telemarketing services.
@@ -51,7 +51,7 @@ The website is built using a modern, server-rendered approach with static files.
 ## Recent Updates (November 2025)
 
 ### New Sections
-- **Flow Section ("ご利用の流れ")**: Added a vertical flow diagram section showing the 4-step process (Hearing, Proposal, Contract Adjustment, Contract) with alternating left-image/right-content layout, blue gradient backgrounds, step badges, and downward arrow connectors. Fully responsive with mobile stacking.
+- **Flow Section ("ご利用の流れ")**: Added a vertical flow diagram section showing the 6-step process (Hearing, Proposal, Contract Adjustment, Contract, Service Implementation, Evaluation and Improvement) with alternating left-image/right-content layout, blue gradient backgrounds, step badges, and downward arrow connectors. Fully responsive with mobile stacking.
 
 ### Image Replacements
 - **Column Detail Pages (column-1.html through column-10.html)**: Consolidated all article images to single GoodConnect branded images
