@@ -43,10 +43,13 @@
   --radius-xl: 1rem;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  /* Shadows - Enhanced for 3D effect */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 4px 10px -2px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 40px -10px rgba(0, 0, 0, 0.2), 0 8px 16px -4px rgba(0, 0, 0, 0.1);
+  --shadow-button: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-button-hover: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.1);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -223,6 +226,7 @@ p {
   cursor: pointer;
   border: none;
   text-decoration: none;
+  box-shadow: var(--shadow-button);
 }
 
 .btn-primary {
@@ -232,7 +236,8 @@ p {
 
 .btn-primary:hover {
   opacity: 0.9;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-hover);
 }
 
 .btn-outline {
@@ -263,10 +268,12 @@ p {
   border-radius: var(--radius-xl);
   padding: var(--spacing-8);
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
 }
 
 .card-lg {
@@ -291,15 +298,17 @@ p {
   padding: var(--spacing-3) var(--spacing-4);
   font-size: 1rem;
   font-family: inherit;
-  border: 1px solid var(--color-input);
+  border: 2px solid var(--color-input);
   border-radius: var(--radius-md);
-  transition: border-color var(--transition-base);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-orange);
+  box-shadow: var(--shadow-md);
 }
 
 .form-textarea {
@@ -321,6 +330,7 @@ p {
   border-bottom: 1px solid var(--color-border);
   z-index: 50;
   transition: box-shadow var(--transition-base);
+  box-shadow: var(--shadow-md);
 }
 
 .header.scrolled {
@@ -678,6 +688,16 @@ p {
 
 .faq-item {
   border-bottom: 1px solid var(--color-border);
+  background: white;
+  margin-bottom: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .faq-question {
@@ -781,6 +801,7 @@ p {
   color: white;
   padding: var(--spacing-16) 0;
   overflow: hidden;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .footer-bg {
@@ -1147,6 +1168,12 @@ p {
 /* Column/Article Card Styles */
 .column-card {
   cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.column-card:hover {
+  box-shadow: var(--shadow-lg);
 }
 
 .column-image-container {
@@ -1490,6 +1517,13 @@ p {
   flex-direction: column;
   overflow: hidden;
   height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
 }
 
 .testimonial-image-wrapper {
