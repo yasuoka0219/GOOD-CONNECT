@@ -543,11 +543,11 @@ p {
 
 .flow-step-image {
   width: 45%;
+  height: 200px;
   flex-shrink: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  min-height: 100%;
 }
 
 .flow-step-image img {
@@ -566,6 +566,9 @@ p {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .flow-step-badge {
