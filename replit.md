@@ -59,9 +59,11 @@ The website is built using a modern, server-rendered approach with static files.
 - **架電実施 (Call Execution)**: call-execution.png - Japanese call center operator with headset
 
 ### Flow Section Images
-- **STEP 05 (サービスの導入)**: jp-phone-call-new.jpg - Japanese business professional on call
-- **STEP 06 (評価と改善)**: jp-conference-room.jpg - Japanese business meeting in conference room
-- All flow images now use consistent Japanese business photography style
+- **STEP 02 (ご提案)**: flow-proposal.png - Business presentation with tablet and graphs
+- **STEP 04 (ご契約)**: flow-contract.png - Business handshake with city skyline background
+- **STEP 05 (サービスの導入)**: flow-service-implementation.png - Japanese office call center operations
+- **STEP 06 (評価と改善)**: flow-evaluation.png - PDCA cycle holographic visualization
+- All flow images now use professional business imagery
 
 ### Image Replacements
 - **Column Detail Pages (column-1.html through column-10.html)**: Consolidated all article images to single GoodConnect branded images
