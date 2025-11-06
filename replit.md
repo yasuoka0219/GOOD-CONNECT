@@ -87,6 +87,41 @@ The website is built using a modern, server-rendered approach with static files.
   - All cards now have perfectly uniform width (equal grid columns) and uniform height within each row
   - Root cause: `word-break: keep-all;` prevented text wrapping, forcing grid columns to expand to fit long titles
 
+### 3D Design Implementation
+- **Shadow System**: Implemented comprehensive shadow system using CSS custom properties
+  - Created shadow variables: `--shadow-sm` (0 1px 3px), `--shadow-md` (0 4px 6px), `--shadow-lg` (0 10px 15px)
+  - Added specialized shadows: `--shadow-button` (base), `--shadow-button-hover` (elevated), `--shadow-card` (medium)
+  - Defined `--color-card-border` for subtle border separation (hsl(220, 20%, 90%))
+- **Interactive Elements**: Enhanced all buttons with 3D effects
+  - Base state: `box-shadow: var(--shadow-button)` with subtle border
+  - Hover state: `box-shadow: var(--shadow-button-hover)` with `transform: translateY(-2px)` for lift effect
+  - Active state: `box-shadow: var(--shadow-sm)` with `transform: translateY(0)` for press effect
+  - Applied to `.btn`, `.btn-primary`, `.btn-secondary`, and `.btn-outline`
+- **Card Components**: Added depth to all card-based elements
+  - Base shadow: `box-shadow: var(--shadow-sm)` with `border: 1px solid var(--color-card-border)`
+  - Hover enhancement: `box-shadow: var(--shadow-lg)` with `transform: translateY(-4px)` for `.card:hover`
+  - Special effects: `.column-card` includes `transform: translateY(-4px)` on hover for pronounced lift
+  - Applied to `.card`, `.column-card`, `.testimonial-card`, `.service-card`, `.reason-card`
+  - Testimonials page: Unified all card HTML structures to use consistent inline styling
+- **Form Elements**: Enhanced inputs with focus-driven depth
+  - Base state: `box-shadow: var(--shadow-sm)` with border
+  - Focus state: `box-shadow: var(--shadow-md)` for visual emphasis
+  - Applied to `input`, `textarea`, `select` elements
+- **FAQ Component**: Implemented button-level shadows for proper visibility
+  - Removed parent `.faq-item` overflow and shadows to prevent clipping
+  - Applied shadows directly to `.faq-question` buttons with `!important` for cascade precedence
+  - Base state: `box-shadow: var(--shadow-sm) !important`
+  - Hover state: `box-shadow: var(--shadow-md) !important` with color transition
+- **Structural Elements**: Added grounding shadows to header and footer
+  - Header: `box-shadow: var(--shadow-sm)` for subtle separation
+  - Footer: `box-shadow: 0 -1px 3px rgba(0,0,0,0.1)` for inverted depth effect
+- **Design Philosophy**: Consistent elevation hierarchy throughout the site
+  - Small shadows (sm) for base states and subtle separation
+  - Medium shadows (md) for hover states and emphasis
+  - Large shadows (lg) for pronounced card hover states
+  - All interactive elements provide tactile feedback through shadow and transform transitions
+- **Testing**: Validated through automated end-to-end tests confirming all cards, buttons, forms, and FAQ elements display proper shadows and interactive depth effects across all pages
+
 ## External Dependencies
 
 - **Express.js**: Used for serving static files and handling API requests.
