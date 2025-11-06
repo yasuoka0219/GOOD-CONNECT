@@ -64,6 +64,7 @@ The website is built using a modern, server-rendered approach with static files.
 - **STEP 05 (サービスの導入)**: flow-service-implementation.png - Japanese office call center operations
 - **STEP 06 (評価と改善)**: flow-evaluation.png - PDCA cycle holographic visualization
 - All flow images now use professional business imagery
+- Images are cropped to match the height of the content box using `align-items: stretch` and `object-fit: cover`
 
 ### Image Replacements
 - **Column Detail Pages (column-1.html through column-10.html)**: Consolidated all article images to single GoodConnect branded images
