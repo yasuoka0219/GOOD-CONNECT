@@ -86,6 +86,7 @@ The website is built using a modern, server-rendered approach with static files.
   - Blue titles (hsl(200, 65%, 45%)) with dotted underline border
   - White card backgrounds on muted section background
   - Fully responsive with mobile stacking at 768px breakpoint
+  - Updated images for Strength 6 (diverse-approach.png - city network visualization) and Strength 8 (rich-experience.png - business handshake)
 
 ### Layout Improvements
 - **Text Layout**: Fixed unnatural word breaks in Japanese text on column cards
