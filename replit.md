@@ -53,6 +53,11 @@ The website is built using a modern, server-rendered approach with static files.
 ### New Sections
 - **Flow Section ("ご利用の流れ")**: Added a vertical flow diagram section showing the 6-step process (Hearing, Proposal, Contract Adjustment, Contract, Service Implementation, Evaluation and Improvement) with alternating left-image/right-content layout, blue gradient backgrounds, step badges, and downward arrow connectors. Fully responsive with mobile stacking.
 
+### Flow Section Images
+- **STEP 05 (サービスの導入)**: jp-phone-call-new.jpg - Japanese business professional on call
+- **STEP 06 (評価と改善)**: jp-conference-room.jpg - Japanese business meeting in conference room
+- All flow images now use consistent Japanese business photography style
+
 ### Image Replacements
 - **Column Detail Pages (column-1.html through column-10.html)**: Consolidated all article images to single GoodConnect branded images
   - Replaced all article images with `/images/goodconnect-[1-10].png` matching column numbers
