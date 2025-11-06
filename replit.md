@@ -53,6 +53,11 @@ The website is built using a modern, server-rendered approach with static files.
 ### New Sections
 - **Flow Section ("ご利用の流れ")**: Added a vertical flow diagram section showing the 6-step process (Hearing, Proposal, Contract Adjustment, Contract, Service Implementation, Evaluation and Improvement) with alternating left-image/right-content layout, blue gradient backgrounds, step badges, and downward arrow connectors. Fully responsive with mobile stacking.
 
+### Service Section Images
+- **リスト作成 (List Creation)**: list-creation.png - Hand writing checklist on paper with tablet in background
+- **スクリプト設計 (Script Design)**: script-design.png - Japanese professional designing tele-sales script on monitor
+- **架電実施 (Call Execution)**: call-execution.png - Japanese call center operator with headset
+
 ### Flow Section Images
 - **STEP 05 (サービスの導入)**: jp-phone-call-new.jpg - Japanese business professional on call
 - **STEP 06 (評価と改善)**: jp-conference-room.jpg - Japanese business meeting in conference room
