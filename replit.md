@@ -74,6 +74,14 @@ The website is built using a modern, server-rendered approach with static files.
   - Column 10: Checklist review (jp-checklist-review.jpg)
 - **Homepage**: Updated phone call service image (jp-phone-call-new.jpg)
 
+### Design Updates
+- **Strengths Section Redesign**: Completely redesigned "選ばれる8つの理由" section with left-image/right-content layout
+  - Changed from 4-column grid to 2-column grid layout
+  - Each box now features 35% width image on left, content on right
+  - Blue titles (hsl(200, 65%, 45%)) with dotted underline border
+  - White card backgrounds on muted section background
+  - Fully responsive with mobile stacking at 768px breakpoint
+
 ### Layout Improvements
 - **Text Layout**: Fixed unnatural word breaks in Japanese text on column cards
   - `word-break: keep-all` - Prevents breaking within Japanese words
