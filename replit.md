@@ -112,6 +112,15 @@ The website is built using a modern, server-rendered approach with static files.
   - All cards now have perfectly uniform width (equal grid columns) and uniform height within each row
   - Root cause: `word-break: keep-all;` prevented text wrapping, forcing grid columns to expand to fit long titles
 
+### Hero Section Background Images (December 2025)
+- **Hero Sections**: Added background images to hero sections across all sub-pages (testimonials, staff, column, company)
+  - Uses same image as footer: `/assets/images/jp-office-building.jpg`
+  - Implemented `.hero-bg`, `.hero-overlay`, `.hero-content` CSS structure for proper layering
+  - Background image has `opacity: 0.4` for subtle effect
+  - Overlay uses linear-gradient with `hsla(220, 40%, 20%, 0.85)` for text contrast
+  - z-index layering ensures proper stacking: bg (0) → overlay (1) → content (2)
+  - Fully responsive with consistent text readability on all viewports
+
 ### 3D Design Implementation
 - **Shadow System**: Implemented comprehensive shadow system using CSS custom properties
   - Created shadow variables: `--shadow-sm` (0 1px 3px), `--shadow-md` (0 4px 6px), `--shadow-lg` (0 10px 15px)
