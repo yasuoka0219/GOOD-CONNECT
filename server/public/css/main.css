@@ -452,7 +452,7 @@ p {
   z-index: 2;
   max-width: 56rem;
   text-align: center;
-  color: white;
+  color: var(--color-primary);
 }
 
 .hero-title {
