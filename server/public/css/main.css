@@ -1139,7 +1139,7 @@ p {
   opacity: 0.4;
 }
 
-.hero-overlay {
+.hero-section .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
