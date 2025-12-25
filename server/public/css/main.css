@@ -443,12 +443,7 @@ p {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    hsla(220, 40%, 20%, 0.05),
-    hsla(220, 40%, 20%, 0.05),
-    hsla(220, 40%, 20%, 0.05)
-  );
+  background: transparent;
   z-index: 1;
 }
 
