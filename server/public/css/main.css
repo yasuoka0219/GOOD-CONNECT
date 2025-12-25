@@ -445,9 +445,9 @@ p {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    hsla(220, 40%, 20%, 0.6),
-    hsla(220, 40%, 20%, 0.55),
-    hsla(220, 40%, 20%, 0.5)
+    hsla(220, 40%, 20%, 0.35),
+    hsla(220, 40%, 20%, 0.3),
+    hsla(220, 40%, 20%, 0.25)
   );
   z-index: 1;
 }
