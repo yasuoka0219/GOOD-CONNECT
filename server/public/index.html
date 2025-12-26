@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=6">
+  <link rel="stylesheet" href="/css/main.css?v=7">
 </head>
 <body>
   <!-- Header -->
@@ -640,16 +640,32 @@
       </div>
 
       <div class="container-narrow">
+        <p class="contact-notice">
+          ご返信に3営業日ほどお時間をいただいております。<br>
+          3営業日を過ぎても返信がない場合は、お手数ですが再度お問い合わせをお願いいたします。
+        </p>
+        
         <div class="card card-lg" id="contact-form-container">
           <form id="contact-form">
             <div class="form-group">
-              <label class="form-label">会社名 <span class="required">*</span></label>
-              <input type="text" class="form-input" name="companyName" placeholder="株式会社〇〇" required>
+              <label class="form-label">お問い合わせ内容 <span class="required">*</span></label>
+              <select class="form-select" name="inquiryType" required>
+                <option value="">選択してください</option>
+                <option value="teleapo">テレアポ代行について</option>
+                <option value="document">資料請求</option>
+                <option value="interview">取材依頼</option>
+                <option value="other">その他</option>
+              </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label">担当者名 <span class="required">*</span></label>
+              <label class="form-label">お名前 <span class="required">*</span></label>
               <input type="text" class="form-input" name="contactName" placeholder="山田 太郎" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">企業名 <span class="required">*</span></label>
+              <input type="text" class="form-input" name="companyName" placeholder="株式会社〇〇" required>
             </div>
 
             <div class="form-group">

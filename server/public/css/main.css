@@ -952,6 +952,44 @@ p {
   color: var(--color-accent-hover);
 }
 
+/* Contact Notice */
+.contact-notice {
+  text-align: center;
+  color: var(--color-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-6);
+}
+
+/* Form Select */
+.form-select {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-muted);
+  color: var(--color-foreground);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.form-select:invalid {
+  color: var(--color-muted-foreground);
+}
+
 /* ===== PRIVACY POLICY PAGE ===== */
 .privacy-content {
   max-width: 48rem;
